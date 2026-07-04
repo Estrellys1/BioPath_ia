@@ -14,14 +14,14 @@ Soluciones diseñadas para médicos, enfermeros, nutricionistas e IPS.
 with open("BioPath_Sentinel_AI_InA.pdf", "rb") as pdf_file:
     pdf_bytes = pdf_file.read()
     st.download_button(
-        label="📄 Descargar PDF",
+        label="Descargar PDF",
         data=pdf_bytes,
         file_name="BioPath_Sentinel_AI_InA.pdf",
         mime="application/pdf"
     )
 
 st.markdown("---")
-st.header("🚀 Videos de la Startup")
+st.header("Videos de la Startup")
 
 st.subheader("Video 1: Presentación")
 st.video("https://www.youtube.com/watch?v=TuVideoID1")
