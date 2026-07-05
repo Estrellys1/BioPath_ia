@@ -59,11 +59,11 @@ with col2:
     try:
         with open("BioPath_Sentinel_AI_InA.pdf", "rb") as pdf_file:
             st.download_button(
-                label="📄 Descargar Presentación PDF",
+                label="Descargar Presentación",
                 data=pdf_file,
                 file_name="BioPath_Sentinel_AI_InA.pdf",
                 mime="application/pdf"
-            )
+             )
     except FileNotFoundError:
         st.warning("Archivo de presentación no disponible.")
 
