@@ -58,9 +58,9 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     try:
         with open("BioPath_Sentinel_AI_InA.pdf", "rb") as pdf_file:
-            st.markdown("""
+           # Asegúrate de que no falte nada después de las tres comillas
+st.markdown("""
     <style>
-    /* Estilos globales */
     .stApp {
         background-color: #000000 !important;
     }
@@ -83,14 +83,14 @@ with col2:
         padding: 20px;
         border-radius: 15px;
     }
-    
-    /* ESTO ES LO QUE TE FALTABA - Estilo para el botón */
     div.stDownloadButton > button {
         background-color: #00f5d4 !important;
         color: #000000 !important;
         font-weight: bold !important;
         border: none !important;
     }
+    </style>
+    """, unsafe_allow_html=True) # <--- ESTA LÍNEA DEBE ESTAR TAL CUAL
     except FileNotFoundError:
         st.warning("Archivo de presentación no disponible.")
 
