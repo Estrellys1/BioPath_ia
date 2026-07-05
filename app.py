@@ -28,13 +28,32 @@ Tamizaje predictivo, gestión clínica hospitalaria y vigilancia genómica.<br>
 
 st.write("") 
 
+# Modifica la sección del botón en tu app.py así:
+
+st.write("") 
+# Nueva línea con la instrucción para el usuario
+st.markdown('<p style="text-align: center; color: #94a3b8; font-size: 16px;">Haz clic aquí para descargar nuestra presentación en PDF</p>', unsafe_allow_html=True)
+
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    try:
+        with open("BioPath_Sentinel_AI_InA.pdf", "rb") as pdf_file:
+            st.download_button(
+                label="Descargar Presentación",
+                data=pdf_file,
+                file_name="BioPath_Sentinel_AI_InA.pdf",
+                mime="application/pdf"
+            )
+    except FileNotFoundError:
+        st.warning("Archivo de presentación no disponible.")
+
 # 4. Botón de descarga (Ahora sí, dentro de su columna)
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     try:
         with open("BioPath_Sentinel_AI_InA.pdf", "rb") as pdf_file:
             st.download_button(
-                label="📄 Descargar Presentación",
+                label="Descargar Presentación",
                 data=pdf_file,
                 file_name="BioPath_Sentinel_AI_InA.pdf",
                 mime="application/pdf"
