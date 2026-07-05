@@ -58,12 +58,13 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     try:
         with open("BioPath_Sentinel_AI_InA.pdf", "rb") as pdf_file:
-            st.download_button(
-                label="Descargar Presentación",
-                data=pdf_file,
-                file_name="BioPath_Sentinel_AI_InA.pdf",
-                mime="application/pdf"
-             )
+            /* Cambiar el color del botón de descarga */
+            div.stDownloadButton > button {
+                background-color: #00f5d4 !important; /* Color cian */
+                color: #000000 !important;             /* Texto negro para que se lea */
+                font-weight: bold !important;
+                border: none !important;
+            }
     except FileNotFoundError:
         st.warning("Archivo de presentación no disponible.")
 
