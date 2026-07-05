@@ -58,13 +58,39 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     try:
         with open("BioPath_Sentinel_AI_InA.pdf", "rb") as pdf_file:
-            /* Cambiar el color del botón de descarga */
-            div.stDownloadButton > button {
-                background-color: #00f5d4 !important; /* Color cian */
-                color: #000000 !important;             /* Texto negro para que se lea */
-                font-weight: bold !important;
-                border: none !important;
-            }
+            st.markdown("""
+    <style>
+    /* Estilos globales */
+    .stApp {
+        background-color: #000000 !important;
+    }
+    h1, h2, h3, p, div {
+        color: #ffffff !important;
+    }
+    .main-title {
+        color: #00f5d4 !important; 
+        font-size: 52px !important;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .description {
+        color: #f1f5f9 !important;
+        font-size: 20px !important;
+        line-height: 1.6;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    /* ESTO ES LO QUE TE FALTABA - Estilo para el botón */
+    div.stDownloadButton > button {
+        background-color: #00f5d4 !important;
+        color: #000000 !important;
+        font-weight: bold !important;
+        border: none !important;
+    }
     except FileNotFoundError:
         st.warning("Archivo de presentación no disponible.")
 
