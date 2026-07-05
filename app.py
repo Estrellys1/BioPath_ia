@@ -23,8 +23,8 @@ with open("BioPath_Sentinel_AI_InA.pdf", "rb") as pdf_file:
 st.markdown("---")
 st.header("Videos de la Startup")
 
-st.subheader("Video 1: Presentación")
+st.subheader("Video 1: BioPath Sentinel AI | Company Overview")
 st.video("https://www.youtube.com/watch?v=O6K29nUL0iY")
 
-st.subheader("Video 2: Demo Técnica")
+st.subheader("Video 2: BioPath Sentinel AI | AI for Healthcare & Bioinformatics")
 st.video("https://www.youtube.com/watch?v=TGPN6YK09yc")
