@@ -24,7 +24,7 @@ st.markdown("---")
 st.header("Videos de la Startup")
 
 st.subheader("Video 1: Presentación")
-st.video("https://www.youtube.com/watch?v=TuVideoID1")
+st.video("https://www.youtube.com/watch?v=O6K29nUL0iY")
 
 st.subheader("Video 2: Demo Técnica")
 st.video("https://www.youtube.com/watch?v=TuVideoID2")
