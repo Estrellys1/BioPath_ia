@@ -1,39 +1,46 @@
 import streamlit as st
 
-st.set_page_config(page_title="BioPath Sentinel AI", layout="centered")
+# Configuración inicial de la página
+st.set_page_config(page_title="BioPath-Sentinel AI", layout="centered")
 
-# CSS personalizado para colores y tamaños
+# CSS optimizado para el modo oscuro definido en config.toml
 st.markdown("""
     <style>
     .main-title {
-        color: #00f5d4; /* Color cian */
-        font-size: 50px !important;
+        color: #00f5d4 !important; 
+        font-size: 52px !important;
         font-weight: 800;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     .sub-title {
-        color: #ffffff;
-        font-size: 24px !important;
+        color: #ffffff !important;
+        font-size: 26px !important;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
     .description {
-        color: #e0e0e0;
-        font-size: 18px !important;
+        color: #f1f5f9 !important;
+        font-size: 20px !important;
         line-height: 1.6;
         text-align: center;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
     }
     .header-style {
-        color: #22d3ee;
-        font-size: 30px !important;
+        color: #22d3ee !important;
+        font-size: 32px !important;
+        font-weight: 700;
+        text-align: center;
         margin-top: 40px;
+        margin-bottom: 20px;
     }
     </style>
     """, unsafe_allow_html=True)
 
-# Uso del HTML personalizado
-st.markdown('<p class="main-title">BioPath Sentinel AI</p>', unsafe_allow_html=True)
+# Títulos y Descripción
+st.markdown('<p class="main-title">BioPath-Sentinel AI</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-title">Inteligencia Clínica para el Personal de Salud</p>', unsafe_allow_html=True)
 
 st.markdown("""
@@ -43,27 +50,31 @@ Tamizaje predictivo, gestión clínica hospitalaria y vigilancia genómica.<br>
 </div>
 """, unsafe_allow_html=True)
 
-st.write("") # Espacio en blanco
+st.write("")
 
-# Botón de descarga centrado
+# Botón de descarga
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     try:
         with open("BioPath_Sentinel_AI_InA.pdf", "rb") as pdf_file:
             st.download_button(
-                label="Descargar Presentación PDF",
+                label="📄 Descargar Presentación PDF",
                 data=pdf_file,
                 file_name="BioPath_Sentinel_AI_InA.pdf",
                 mime="application/pdf"
             )
     except FileNotFoundError:
-        st.error("El archivo PDF no se encuentra en la ruta especificada.")
+        st.warning("Archivo de presentación no disponible.")
 
 st.markdown("---")
+
+# Secciones de video con diseño mejorado
 st.markdown('<p class="header-style">AI-Powered Clinical Intelligence</p>', unsafe_allow_html=True)
 
-st.write("### BioPath Sentinel AI | Company Overview")
+st.subheader("BioPath-Sentinel AI | Company Overview")
 st.video("https://www.youtube.com/watch?v=TuVideoID1")
 
-st.write("### Artificial Intelligence • Bioinformatics • Digital Health")
+st.write("---")
+
+st.subheader("Artificial Intelligence • Bioinformatics • Digital Health")
 st.video("https://www.youtube.com/watch?v=TuVideoID2")
