@@ -6,6 +6,14 @@ st.set_page_config(page_title="BioPath-Sentinel AI", layout="centered")
 # CSS optimizado para el modo oscuro definido en config.toml
 st.markdown("""
     <style>
+    /* Forzar fondo oscuro en toda la página */
+    .stApp {
+        background-color: #000000 !important;
+    }
+    /* Asegurar que todos los textos sean claros */
+    h1, h2, h3, p, div {
+        color: #ffffff !important;
+    }
     .main-title {
         color: #00f5d4 !important; 
         font-size: 52px !important;
@@ -13,21 +21,14 @@ st.markdown("""
         text-align: center;
         margin-bottom: 5px;
     }
-    .sub-title {
-        color: #ffffff !important;
-        font-size: 26px !important;
-        text-align: center;
-        margin-bottom: 25px;
-    }
     .description {
         color: #f1f5f9 !important;
         font-size: 20px !important;
         line-height: 1.6;
         text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
         padding: 20px;
-        background-color: rgba(255, 255, 255, 0.05);
         border-radius: 15px;
-    }
     .header-style {
         color: #22d3ee !important;
         font-size: 32px !important;
